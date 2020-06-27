@@ -1,0 +1,92 @@
+/*
+  TABLE OF CONTENTS
+
+  1.0) Google fonts imports
+  2.0) default website styling
+  3.0) Header
+*/
+
+/* 1.0) Google fonts imports */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/* 2.0) Deafult website styling */
+* {
+  margin: 0; padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+body {
+  background-color: #C7BCE3;
+}
+h1,h2 {
+  text-transform: capitalize;
+  font-weight: 500;
+}
+
+/* 3.0) Header */ 
+header {
+  padding: 2rem;
+  display: block;
+  text-align: center;
+}
+header > h1 {
+  font-size: 3rem;
+}
+/* 3.0) Color Generator Div */
+.color-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+.color-container > h1 {
+  padding: 1rem;
+  margin: 2rem 0;
+  background-color: #333;
+  color: white;
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px rgba(0,0,0,0.2);
+}
+.color-container > h1 > span {
+  color: aqua;
+}
+.color-container .color-generate-btn {
+  cursor: pointer;
+  text-align: center;
+  min-width: 180px;
+  line-height: 45px;
+  border: 2px solid #333;
+  border-radius: 5px;
+  background-color: transparent ;
+  font-weight: 500;
+  font-size: 1rem;
+  outline: none;
+  transition: all .3s ease-in-out;
+}
+.color-container .color-generate-btn:hover {
+  background-color: #333;
+  color: #fff;
+}
+/* 8.0) copy message **/
+.copy-message {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  transform: translateY(30px) scale(0.5);
+  visibility: hidden;
+  opacity: 0;
+  transition: all .5s ease-in-out;
+}
+.copy-message > h2 {
+  background-color:#333 ;
+  color: #fff;
+  padding: .5rem;
+  border-radius: 8px;
+}
+.message-active {
+visibility: visible;
+opacity: 1;
+transform: translateY(0px) scale(1);
+}
+
